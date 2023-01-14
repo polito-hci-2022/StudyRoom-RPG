@@ -400,7 +400,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/UTech/MG-Karting
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\giovy\StudyRoom-RPG
+  m_LastProjectPath: C:\Users\alega\Documents\GitHub\StudyRoom-RPG\StudyRoom-RPG
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
