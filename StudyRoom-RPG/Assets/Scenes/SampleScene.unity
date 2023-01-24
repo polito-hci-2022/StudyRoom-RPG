@@ -1510,7 +1510,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 426582684}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 755750772}
+        m_TargetAssemblyTypeName: CreateTableScript, Assembly-CSharp
+        m_MethodName: SetPrivacy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &426582684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1524,7 +1536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21176471, g: 0.95686275, b: 1, a: 1}
+  m_Color: {r: 0.19607845, g: 0.6313726, b: 0.9607844, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2122,7 +2134,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 529865186}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 755750772}
+        m_TargetAssemblyTypeName: CreateTableScript, Assembly-CSharp
+        m_MethodName: OnTableConfirmation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 1689263056}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
+      - m_Target: {fileID: 755750767}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &529865186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3643,6 +3691,7 @@ GameObject:
   - component: {fileID: 755750770}
   - component: {fileID: 755750769}
   - component: {fileID: 755750768}
+  - component: {fileID: 755750772}
   m_Layer: 5
   m_Name: Create Table - Canvas
   m_TagString: Untagged
@@ -3740,6 +3789,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 7}
   m_SizeDelta: {x: 15, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &755750772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755750767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7003cf936d8db324a8f4e1f4b4a4010c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next_b: {fileID: 529865185}
+  table: {fileID: 1673302631}
+  input_name: {fileID: 725028276}
 --- !u!1 &770479846
 GameObject:
   m_ObjectHideFlags: 0
@@ -7116,6 +7180,7 @@ MonoBehaviour:
   table_name: 
   table_code: 
   subject: 
+  privacy: 0
 --- !u!4 &1673302632
 Transform:
   m_ObjectHideFlags: 0
@@ -8194,7 +8259,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1924313069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 755750772}
+        m_TargetAssemblyTypeName: CreateTableScript, Assembly-CSharp
+        m_MethodName: SetPrivacy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1924313069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9017,7 +9094,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2062353459}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642086758}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
+      - m_Target: {fileID: 755750767}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &2062353459
 MonoBehaviour:
   m_ObjectHideFlags: 0

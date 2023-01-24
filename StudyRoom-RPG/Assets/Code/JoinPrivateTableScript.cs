@@ -27,6 +27,7 @@ public class JoinPrivateTableScript : MonoBehaviour
     public void OnTableConfirmation() {
         table.table_name = "Hardcoded name";
         table.table_code = code;
+        table.privacy = Privacy.Private;
     }
 
 

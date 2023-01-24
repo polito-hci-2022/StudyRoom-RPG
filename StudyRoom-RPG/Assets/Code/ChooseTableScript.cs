@@ -44,6 +44,7 @@ public class ChooseTableScript : MonoBehaviour
     public void OnTableConfirmation() {
         table.table_name = table_name;
         table.table_code = table_code;
+        table.privacy = Privacy.Public;
     }
 
     void OnEnable()
