@@ -378,14 +378,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 642086763}
         m_TargetAssemblyTypeName: ChooseTableScript, Assembly-CSharp
-        m_MethodName: onTableSelection
-        m_Mode: 1
+        m_MethodName: OnTableSelection
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 696969
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &129785933
@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 154526156}
   - component: {fileID: 154526155}
   - component: {fileID: 154526154}
+  - component: {fileID: 154526158}
   m_Layer: 5
   m_Name: Join Private Table - Canvas
   m_TagString: Untagged
@@ -532,6 +533,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 7}
   m_SizeDelta: {x: 15, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &154526158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154526153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 216b824d9c31ee143b68caeee73384df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next_b: {fileID: 1009542105}
+  table: {fileID: 1673302631}
+  input_code: {fileID: 2095835156}
 --- !u!1 &158220876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4283425761326543017, guid: 1f4d373a613d0466fbd8849470265852,
@@ -2645,6 +2661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   next_b: {fileID: 666986782}
   selection_group: {fileID: 596634560}
+  table: {fileID: 1673302631}
 --- !u!1 &651846643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,6 +2832,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 642086763}
+        m_TargetAssemblyTypeName: ChooseTableScript, Assembly-CSharp
+        m_MethodName: OnTableConfirmation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1689263056}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3452,7 +3481,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3474,14 +3503,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 642086763}
         m_TargetAssemblyTypeName: ChooseTableScript, Assembly-CSharp
-        m_MethodName: onTableSelection
-        m_Mode: 1
+        m_MethodName: OnTableSelection
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 123456
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &747872504
@@ -4216,7 +4245,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1154222108}
         m_TargetAssemblyTypeName: ChooseSubjectScript, Assembly-CSharp
-        m_MethodName: onSubjectSelection
+        m_MethodName: OnSubjectSelection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5086,7 +5115,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1009542106}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 154526158}
+        m_TargetAssemblyTypeName: JoinPrivateTableScript, Assembly-CSharp
+        m_MethodName: OnTableConfirmation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 154526153}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 1689263056}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
 --- !u!114 &1009542106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5490,7 +5555,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1154222108}
         m_TargetAssemblyTypeName: ChooseSubjectScript, Assembly-CSharp
-        m_MethodName: onSubjectSelection
+        m_MethodName: OnSubjectSelection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5657,6 +5722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   next_b: {fileID: 790241512}
   selection_group: {fileID: 1609872186}
+  table: {fileID: 1673302631}
 --- !u!1 &1172180335
 GameObject:
   m_ObjectHideFlags: 0
@@ -6140,7 +6206,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1154222108}
         m_TargetAssemblyTypeName: ChooseSubjectScript, Assembly-CSharp
-        m_MethodName: onSubjectSelection
+        m_MethodName: OnSubjectSelection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7018,6 +7084,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646389163}
   m_CullTransparentMesh: 1
+--- !u!1 &1673302630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673302632}
+  - component: {fileID: 1673302631}
+  m_Layer: 0
+  m_Name: Table
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1673302631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673302630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1886561521604b34e9b16709ba517553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  table_name: 
+  table_code: 
+  subject: 
+--- !u!4 &1673302632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673302630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1684951658 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4283425761326543017, guid: 1f4d373a613d0466fbd8849470265852,
@@ -7110,14 +7223,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 642086763}
         m_TargetAssemblyTypeName: ChooseTableScript, Assembly-CSharp
-        m_MethodName: onTableSelection
-        m_Mode: 1
+        m_MethodName: OnTableSelection
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 000000
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1686462256
@@ -9333,7 +9446,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2142745701}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642086758}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
+      - m_Target: {fileID: 154526153}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &2142745701
 MonoBehaviour:
   m_ObjectHideFlags: 0
