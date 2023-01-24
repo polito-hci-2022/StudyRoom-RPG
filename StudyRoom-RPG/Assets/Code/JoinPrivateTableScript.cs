@@ -9,7 +9,7 @@ public class JoinPrivateTableScript : MonoBehaviour
     public Button next_b;
     public Table table;
     public InputField input_code;
-    
+    string code;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +19,15 @@ public class JoinPrivateTableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //code is child 2 because a Caret is automaticly added when the InputField is used
+        code = input_code.transform.GetChild(2).gameObject.GetComponent<Text>().text;
+        next_b.interactable = (code != "");
     }
 
     public void OnTableConfirmation() {
-        string code = input_code.transform.GetChild(1).gameObject.GetComponent<Text>().text;
-        if (code == "") {
-            return;
-        }
         table.table_name = "Hardcoded name";
         table.table_code = code;
     }
+
+
 }

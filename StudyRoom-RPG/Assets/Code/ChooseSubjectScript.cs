@@ -39,4 +39,9 @@ public class ChooseSubjectScript : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        next_b.interactable = false;
+    }
+
 }

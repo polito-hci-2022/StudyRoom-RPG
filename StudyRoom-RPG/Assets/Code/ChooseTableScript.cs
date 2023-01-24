@@ -16,7 +16,6 @@ public class ChooseTableScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        next_b.interactable = false;
         for (int i=0; i<selection_group.transform.childCount; i++) {
             Button button = selection_group.transform.GetChild(i).gameObject.GetComponent<Button>();
             tables.Add(button);
@@ -45,5 +44,10 @@ public class ChooseTableScript : MonoBehaviour
     public void OnTableConfirmation() {
         table.table_name = table_name;
         table.table_code = table_code;
+    }
+
+    void OnEnable()
+    {
+        next_b.interactable = false;
     }
 }
