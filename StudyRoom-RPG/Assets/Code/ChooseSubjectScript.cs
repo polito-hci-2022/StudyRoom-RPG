@@ -10,7 +10,6 @@ public class ChooseSubjectScript : MonoBehaviour
     public Button next_b;
     public VerticalLayoutGroup selection_group;
     List<Button> subjects = new List<Button>();
-    public Table table;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +30,7 @@ public class ChooseSubjectScript : MonoBehaviour
     public void OnSubjectSelection() {
         GameObject selected_object = EventSystem.current.currentSelectedGameObject;
         if (selected_object!=null && subjects.Contains(selected_object.GetComponent<Button>())) {
-            table.subject = selected_object.transform.GetChild(0).GetComponent<Text>().text;
+            Table.instance.subject = selected_object.transform.GetChild(0).GetComponent<Text>().text;
             next_b.interactable = true;
         }
         else {

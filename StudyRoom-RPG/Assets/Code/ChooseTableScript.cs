@@ -10,7 +10,6 @@ public class ChooseTableScript : MonoBehaviour
     public Button next_b;
     public VerticalLayoutGroup selection_group;
     List<Button> tables = new List<Button>();
-    public Table table;
     string table_code, table_name;
     
     // Start is called before the first frame update
@@ -42,9 +41,9 @@ public class ChooseTableScript : MonoBehaviour
     }
 
     public void OnTableConfirmation() {
-        table.table_name = table_name;
-        table.table_code = table_code;
-        table.privacy = Privacy.Public;
+        Table.instance.table_name = table_name;
+        Table.instance.table_code = table_code;
+        Table.instance.privacy = Privacy.Public;
     }
 
     void OnEnable()

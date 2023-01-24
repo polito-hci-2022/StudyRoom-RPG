@@ -7,7 +7,6 @@ using UnityEngine.EventSystems;
 public class JoinPrivateTableScript : MonoBehaviour
 {
     public Button next_b;
-    public Table table;
     public InputField input_code;
     string code;
     // Start is called before the first frame update
@@ -25,9 +24,9 @@ public class JoinPrivateTableScript : MonoBehaviour
     }
 
     public void OnTableConfirmation() {
-        table.table_name = "Hardcoded name";
-        table.table_code = code;
-        table.privacy = Privacy.Private;
+        Table.instance.table_name = "Hardcoded name";
+        Table.instance.table_code = code;
+        Table.instance.privacy = Privacy.Private;
     }
 
 

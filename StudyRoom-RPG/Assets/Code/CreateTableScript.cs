@@ -7,7 +7,6 @@ using UnityEngine.EventSystems;
 public class CreateTableScript : MonoBehaviour
 {
     public Button next_b;
-    public Table table;
     public InputField input_name;
     Privacy privacy;
     string table_name;
@@ -28,9 +27,9 @@ public class CreateTableScript : MonoBehaviour
 
     public void OnTableConfirmation()
     {
-        table.table_name = table_name;
-        table.table_code = "100001";
-        table.privacy = privacy;
+        Table.instance.table_name = table_name;
+        Table.instance.table_code = "100001";
+        Table.instance.privacy = privacy;
     }
 
     public void SetPrivacy(int val) {
