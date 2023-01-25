@@ -44,9 +44,9 @@ public class DocumentList : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public static void UploadDocument(string title, int mode) {
+    public void UploadDocument(string title, Mode mode) {
         int i = documents.FindIndex( x => x.title == title );
-        documents[i].mode = (Mode) mode;
+        documents[i].mode = mode;
     }
 
 }
