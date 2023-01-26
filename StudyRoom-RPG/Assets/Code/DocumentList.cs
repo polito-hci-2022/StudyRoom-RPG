@@ -6,7 +6,7 @@ public enum Mode
 {
     NotUploaded,
     ReadOnly,
-    ReadWrite
+    Downloadable
 }
 
 public class Document {
@@ -33,7 +33,7 @@ public class DocumentList : MonoBehaviour
         }
         documents.Clear();
         Document table_note_1 = new Document("Table Note 1", Mode.ReadOnly, false);
-        Document table_note_2 = new Document("Table Note 2", Mode.ReadWrite, false);
+        Document table_note_2 = new Document("Table Note 2", Mode.Downloadable, false);
         Document my_note_1 = new Document("My Note 1", Mode.NotUploaded, true);
         Document my_note_2 = new Document("My Note 2", Mode.NotUploaded, true);
         documents.Add(table_note_1);
@@ -47,6 +47,10 @@ public class DocumentList : MonoBehaviour
     public void UploadDocument(string title, Mode mode) {
         int i = documents.FindIndex( x => x.title == title );
         documents[i].mode = mode;
+    }
+
+    public List<Document> GetDocumentsOnTable() {
+        return documents.FindAll(x => x.mode != Mode.NotUploaded);
     }
 
 }
