@@ -30,9 +30,7 @@ public class DocumentList : MonoBehaviour
     public Document open_doc;
 
     private void Awake() {
-        Debug.Log("AWAKE");
         if (instance != null) {
-            Debug.Log("DESTROY");
             Destroy(gameObject);
             return;
         }
@@ -60,12 +58,10 @@ public class DocumentList : MonoBehaviour
     }
 
     public void SetOpenDoc(Text name) {
-        Debug.Log("OPEN DOC:" + name.text);
         open_doc = documents.Find(x => x.title == name.text);
     }
 
     public Document GetOpenDoc() {
-        Debug.Log("GET DOC:"+open_doc.title);
         return open_doc;
     }
 

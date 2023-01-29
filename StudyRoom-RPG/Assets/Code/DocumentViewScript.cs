@@ -9,7 +9,6 @@ public class DocumentViewScript : MonoBehaviour
     public Text document_name;
     void OnEnable()
     {
-        Debug.Log("ONENABLE");
         document_name.text = DocumentList.instance.GetOpenDoc().title;
     }
 
