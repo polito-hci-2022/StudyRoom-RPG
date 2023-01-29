@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public enum Mode
 {
@@ -24,10 +26,13 @@ public class Document {
 public class DocumentList : MonoBehaviour
 {
     public static DocumentList instance;
-    public static List<Document> documents = new List<Document>();
+    public List<Document> documents = new List<Document>();
+    public Document open_doc;
 
     private void Awake() {
+        Debug.Log("AWAKE");
         if (instance != null) {
+            Debug.Log("DESTROY");
             Destroy(gameObject);
             return;
         }
@@ -40,6 +45,7 @@ public class DocumentList : MonoBehaviour
         documents.Add(table_note_2);
         documents.Add(my_note_1);
         documents.Add(my_note_2);
+        open_doc = my_note_1; 
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
@@ -51,6 +57,16 @@ public class DocumentList : MonoBehaviour
 
     public List<Document> GetDocumentsOnTable() {
         return documents.FindAll(x => x.mode != Mode.NotUploaded);
+    }
+
+    public void SetOpenDoc(Text name) {
+        Debug.Log("OPEN DOC:" + name.text);
+        open_doc = documents.Find(x => x.title == name.text);
+    }
+
+    public Document GetOpenDoc() {
+        Debug.Log("GET DOC:"+open_doc.title);
+        return open_doc;
     }
 
 }
