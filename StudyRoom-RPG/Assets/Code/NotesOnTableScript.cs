@@ -15,6 +15,8 @@ public class NotesOnTableScript : MonoBehaviour
         GameObject[] notes = {note1, note2, note3, note4};
         document_list = DocumentList.instance.GetDocumentsOnTable();
         for (int i=0; i<document_list.Count; i++) {
+            notes[i].transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>().text = document_list[i].title;
+            notes[i].transform.GetChild(1).gameObject.GetComponent<Button>().interactable = (document_list[i].mode == Mode.Downloadable);
             notes[i].SetActive(true);
         }
 
