@@ -14,8 +14,8 @@ public class PageManagementScript : MonoBehaviour
     void Start()
     {
         page_number_text = gameObject.transform.GetChild(0).GetComponent<Text>();
-        next = gameObject.transform.GetChild(1).GetComponent<Button>();
-        previous = gameObject.transform.GetChild(2).GetComponent<Button>();
+        previous = gameObject.transform.GetChild(1).GetComponent<Button>();
+        next = gameObject.transform.GetChild(2).GetComponent<Button>();
         page_number_text.text = "Page: " + page_number + "/3";
         previous.interactable = false;
     }
