@@ -2178,7 +2178,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 115475401}
         m_TargetAssemblyTypeName: PageManagementScript, Assembly-CSharp
-        m_MethodName: PreviousPage
+        m_MethodName: NextPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3224,7 +3224,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 115475401}
         m_TargetAssemblyTypeName: PageManagementScript, Assembly-CSharp
-        m_MethodName: NextPage
+        m_MethodName: PreviousPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
