@@ -57,6 +57,15 @@ public class DocumentList : MonoBehaviour
         return documents.FindAll(x => x.mode != Mode.NotUploaded);
     }
 
+    public void DownloadDocument(string title) {
+        int i = documents.FindIndex( x => x.title == title );
+        documents[i].isMine = true;
+    }
+
+    public List<Document> GetMyDocuments() {
+        return documents.FindAll(x => x.isMine == true);
+    }
+
     public void SetOpenDoc(Text name) {
         open_doc = documents.Find(x => x.title == name.text);
     }

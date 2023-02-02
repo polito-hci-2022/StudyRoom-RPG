@@ -16,10 +16,9 @@ public class NotesOnTableScript : MonoBehaviour
         document_list = DocumentList.instance.GetDocumentsOnTable();
         for (int i=0; i<document_list.Count; i++) {
             notes[i].transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>().text = document_list[i].title;
-            notes[i].transform.GetChild(1).gameObject.GetComponent<Button>().interactable = (document_list[i].mode == Mode.Downloadable);
+            notes[i].transform.GetChild(1).gameObject.GetComponent<Button>().interactable = (document_list[i].mode == Mode.Downloadable /*&& !document_list[i].isMine*/);
             notes[i].SetActive(true);
         }
-
     }
 
     // Update is called once per frame
@@ -27,4 +26,5 @@ public class NotesOnTableScript : MonoBehaviour
     {
         
     }
+
 }

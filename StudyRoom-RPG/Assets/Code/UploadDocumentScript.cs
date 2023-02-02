@@ -15,6 +15,7 @@ public class UploadDocumentScript : MonoBehaviour
     {
         mode = Mode.NotUploaded;
         upload_b.interactable = false;
+        modal_text.text = "How do you want to upload " + document_name + "?";
     }
 
     // Update is called once per frame
@@ -23,9 +24,9 @@ public class UploadDocumentScript : MonoBehaviour
 
     }
 
-    public void UploadDocument(string document_name) {
-        modal_text.text = "How do you want to upload " + document_name + "?";
-        this.document_name = document_name;
+    public void UploadDocument(Text document_name) {
+        this.document_name = document_name.text;
+        DocumentList.instance.SetOpenDoc(document_name);
     }
 
     public void SetMode(int mode) {

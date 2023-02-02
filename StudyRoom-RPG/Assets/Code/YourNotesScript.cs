@@ -6,29 +6,22 @@ using UnityEngine.EventSystems;
 
 public class YourNotesScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject note1, note2;
-    void Start()
+    List<Document> document_list;
+    public GameObject note1, note2, note3, note4;
+    void OnEnable()
     {
-        CheckWhatOnTable();
+        GameObject[] notes = {note1, note2, note3, note4};
+        document_list = DocumentList.instance.GetMyDocuments();
+        for (int i=0; i<document_list.Count; i++) {
+            notes[i].transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>().text = document_list[i].title;
+            notes[i].transform.GetChild(1).gameObject.GetComponent<Button>().interactable = (document_list[i].mode == Mode.NotUploaded);
+            notes[i].SetActive(true);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
 
-    }
-
-    public void CheckWhatOnTable()
-    {
-        List<Document> table_docs = DocumentList.instance.GetDocumentsOnTable();
-        if (table_docs.Exists(x => note1.transform.GetChild(0).GetChild(0).GetComponent<Text>().text == x.title))
-        {
-            note1.transform.GetChild(1).GetComponent<Button>().interactable = false;
-        }
-        if (table_docs.Exists(x => note2.transform.GetChild(0).GetChild(0).GetComponent<Text>().text == x.title))
-        {
-            note2.transform.GetChild(1).GetComponent<Button>().interactable = false;
-        }
     }
 }
