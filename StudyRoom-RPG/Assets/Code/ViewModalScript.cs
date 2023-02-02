@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
-public class ViewScript : MonoBehaviour
+public class ViewModalScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        
+        gameObject.transform.GetChild(2).GetComponent<Text>().text = "Do you want to open and see " + DocumentList.instance.GetOpenDoc().title + "?";
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    public void SetOpenDoc(Text name) {
-        DocumentList.instance.SetOpenDoc(name);
     }
 }
