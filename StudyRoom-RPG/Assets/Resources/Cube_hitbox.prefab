@@ -30,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -109,5 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 4281150576732488596}
-  _x: {fileID: 4742112844017328717, guid: 8db36ee4717ac1f4b8cea9285a81303e, type: 3}
-  _o: {fileID: 3455483168407604179, guid: b7a0675be926de644b4391936c2437fb, type: 3}
+  _x: {fileID: 821658044963830985, guid: 47b96e6a8e4859a439e0adf3b44fb716, type: 3}
+  _o: {fileID: 5485244360484938163, guid: e640ec6f1f428084887da7f1bd65db68, type: 3}
