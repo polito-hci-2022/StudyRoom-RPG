@@ -5648,7 +5648,7 @@ GameObject:
   - component: {fileID: 639322141}
   - component: {fileID: 639322140}
   m_Layer: 5
-  m_Name: Back - Text
+  m_Name: Return to Table - Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5707,7 +5707,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Back
+  m_Text: Return to table
 --- !u!222 &639322141
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8263,7 +8263,7 @@ GameObject:
   - component: {fileID: 888903855}
   - component: {fileID: 888903854}
   m_Layer: 5
-  m_Name: Back - Button
+  m_Name: Return to Table - Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15672,7 +15672,7 @@ GameObject:
   - component: {fileID: 1741258155}
   - component: {fileID: 1741258154}
   m_Layer: 5
-  m_Name: Back - Text
+  m_Name: Return to Table - Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15731,7 +15731,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Back
+  m_Text: Return to table
 --- !u!222 &1741258155
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18048,7 +18048,7 @@ GameObject:
   - component: {fileID: 2051028233}
   - component: {fileID: 2051028232}
   m_Layer: 5
-  m_Name: Back - Button
+  m_Name: Return to Table - Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
