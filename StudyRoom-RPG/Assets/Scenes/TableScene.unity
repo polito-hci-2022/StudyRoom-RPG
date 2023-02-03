@@ -17994,7 +17994,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 269
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -18003,7 +18003,9 @@ MonoBehaviour:
   m_Text: 'Waiting for other players to join the game...
 
 
-    1/2'
+    1/2
+
+    You'
 --- !u!222 &1640516731
 CanvasRenderer:
   m_ObjectHideFlags: 0
