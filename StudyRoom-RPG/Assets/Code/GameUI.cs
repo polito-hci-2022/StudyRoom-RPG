@@ -15,10 +15,13 @@ public class GameUI : MonoBehaviour {
     [SerializeField] private Animator _winAnimator;
     [SerializeField] private TextMeshProUGUI _winnerText;
     [SerializeField] private Button _continueBtn;
+    [SerializeField] private TextMeshProUGUI XTurn, OTurn;
 
     void Start() {
         _continueBtn.onClick.AddListener(GameManager.Instance.Board.Reset);
         GameManager.Instance.OnGameEnd += OnGameEnd;
+        GameManager.Instance.OTurn = OTurn;
+        GameManager.Instance.XTurn = XTurn;
     }
 
     private void OnGameEnd(bool end, int winType) {
@@ -33,10 +36,10 @@ public class GameUI : MonoBehaviour {
                 _winnerText.SetText("No one");
             }
             else {
-                _winnerText.SetText(winType == 0 ? "X" : "O");
+                _winnerText.SetText(winType == 0 ? "You" : "Person 1");
             }
         }
-
+        XTurn.gameObject.SetActive(true);
         _winAnimator.SetTrigger(state);
         _currentState = state;
     }

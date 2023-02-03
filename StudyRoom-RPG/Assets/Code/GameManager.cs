@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour {
     private static GameManager _instance;
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour {
     public bool DevMode => _devMode;
     public Board Board => _board;
     public List<HitBox> Pattern => _matchedPattern;
+    public TextMeshProUGUI XTurn, OTurn;
 
     private int _maxMoves => _thirdDimension ? _rows * _rows * _rows : _rows * _rows;
 
@@ -58,18 +61,29 @@ public class GameManager : MonoBehaviour {
 
     public void MoveMade() {
         _turn++;
-
         _matchedPattern = PatternFinder.CheckWin(_fields);
         Debug.Log(_maxMoves);
         if (_matchedPattern != null) {
             // WINNER
             _gameEnd = true;
             OnGameEnd?.Invoke(_gameEnd, _matchedPattern[0].Type);
+            OTurn.gameObject.SetActive(false);
+            XTurn.gameObject.SetActive(false);
         }
         else if (_turn >= _maxMoves) {
             // TIE
             _gameEnd = true;
             OnGameEnd?.Invoke(_gameEnd, -1);
+            OTurn.gameObject.SetActive(false);
+            XTurn.gameObject.SetActive(false);
+        }
+        else if (Turn == 0) {
+            OTurn.gameObject.SetActive(false);
+            XTurn.gameObject.SetActive(true);
+        }
+        else if (Turn == 1) {
+            XTurn.gameObject.SetActive(false);
+            OTurn.gameObject.SetActive(true);
         }
     }
 
