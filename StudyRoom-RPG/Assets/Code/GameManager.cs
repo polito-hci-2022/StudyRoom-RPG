@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance =>
         _instance ? _instance : new GameObject("Game Manager").AddComponent<GameManager>();
 
-    public GameObject XTurn, OTurn; 
     private int _rows;
     private int _turn;
     private int _match = 3;
@@ -59,16 +58,9 @@ public class GameManager : MonoBehaviour {
 
     public void MoveMade() {
         _turn++;
+
         _matchedPattern = PatternFinder.CheckWin(_fields);
         Debug.Log(_maxMoves);
-        if (Turn == 0 ) {
-            OTurn.SetActive(false);
-            XTurn.SetActive(true);
-        }
-        else {
-            XTurn.SetActive(false);
-            OTurn.SetActive(true);
-        }
         if (_matchedPattern != null) {
             // WINNER
             _gameEnd = true;
