@@ -9,7 +9,12 @@ public class DownloadModalScript : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        gameObject.transform.GetChild(2).GetComponent<Text>().text = "Do you want to download " + document_name + "?";
+        if (!DocumentList.instance.GetMyDocuments().Exists( x => x.title == document_name)) {
+            gameObject.transform.GetChild(2).GetComponent<Text>().text = "Do you want to download " + document_name + "?";    
+        }
+        else {
+            gameObject.transform.GetChild(2).GetComponent<Text>().text = "A document called "+ document_name + " is already present in your notes: if you continue it will be overwritten.\n\nDo you want to download it anyway?";
+        }
     }
 
     // Update is called once per frame
