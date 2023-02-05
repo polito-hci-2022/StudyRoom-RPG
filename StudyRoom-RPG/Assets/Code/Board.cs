@@ -14,7 +14,7 @@ public class Board : MonoBehaviour {
 
     private Dictionary<HitBox, string> _fields = new Dictionary<HitBox, string>();
 
-    void OnEnable() {
+    void Awake() {
         GameManager.Instance.SetBoard(this);
         _rowsSlider.onValueChanged.AddListener(OnSliderValueChanged);
         _thicknessSlider.onValueChanged.AddListener(OnSliderValueChanged);
