@@ -3496,9 +3496,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "COMMANDS\n\n- Hold the trigger and move the pointer to rotate the field.\n-
-    Point the pointer on the desired spot and click to place your symbol \n  during
-    your turn\n\n\n"
+  m_Text: "COMMANDS\n\n- Hold the trigger and move the pointer to rotate the field.
+    You can also\n  walk around it if you have enough room\n- Point the pointer on
+    the desired spot and click to place your symbol \n  during your turn\n\n\n"
 --- !u!222 &907448517
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6198,7 +6198,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1540807678
 Canvas:
   m_ObjectHideFlags: 0
