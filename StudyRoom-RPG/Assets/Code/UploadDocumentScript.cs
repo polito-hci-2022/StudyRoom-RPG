@@ -16,9 +16,11 @@ public class UploadDocumentScript : MonoBehaviour
         mode = Mode.NotUploaded;
         upload_b.interactable = false;
         if (!DocumentList.instance.GetDocumentsOnTable().Exists( x => x.title == document_name)) {
+            modal_text.fontSize = 65;
             modal_text.text = "How do you want to upload " + document_name + "?";
         }
         else {
+            modal_text.fontSize = 50;
             modal_text.text = "A document called "+ document_name + " is already present on the table: if you continue it will be overwritten.\n\nDo you want to upload it anyway?";
         }
     }
