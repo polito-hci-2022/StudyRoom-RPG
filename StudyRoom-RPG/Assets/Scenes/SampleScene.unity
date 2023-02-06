@@ -2470,8 +2470,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: 1.6}
-  m_SizeDelta: {x: 1500, y: 100}
+  m_AnchoredPosition: {x: -0.0222, y: 0.0345}
+  m_SizeDelta: {x: 1561.7253, y: 450.1108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &315401061
 MonoBehaviour:
@@ -2506,9 +2506,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Add infos about JoinTable Canvas
-
-'
+  m_Text: Here you can join a public or private table by inserting its code.
 --- !u!222 &315401062
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2938,8 +2936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: 1.6}
-  m_SizeDelta: {x: 1500, y: 100}
+  m_AnchoredPosition: {x: 0.0236, y: 0.3}
+  m_SizeDelta: {x: 1574.123, y: 425.1288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &374966249
 MonoBehaviour:
@@ -2963,10 +2961,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2d66978b934ffda4cbacdb9fc1859ad7, type: 3}
-    m_FontSize: 70
+    m_FontSize: 53
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 7
+    m_MinSize: 5
     m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2974,9 +2972,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Add infos about CreateTable Canvas
-
-'
+  m_Text: "Here you can create your own table by giving it a name and a privacy level:\n-
+    Private: the table won't appear in the table list of other users\n  and will
+    be accessible only by code.\n- Public: the table will be accessible by both the
+    table list and\n  the code\nThe code will be automatically generated and shown
+    after creating the table."
 --- !u!222 &374966250
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3458,8 +3458,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: 1.6}
-  m_SizeDelta: {x: 1500, y: 100}
+  m_AnchoredPosition: {x: 0.024, y: 0.0558}
+  m_SizeDelta: {x: 1549.2852, y: 443.1571}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475964211
 MonoBehaviour:
@@ -3483,10 +3483,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2d66978b934ffda4cbacdb9fc1859ad7, type: 3}
-    m_FontSize: 70
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 7
+    m_MinSize: 5
     m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3494,9 +3494,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Add infos about ChooseTable Canvas
-
-'
+  m_Text: "Here you can join a set of public tables for the selected subject. For
+    each table you can see the number ov available seats and, once selected, its
+    unique code. \nIf you are looking for a specific table (public or private), click
+    on \"Join table by code\".\nIf you want to create a new table, click on \"Create
+    new table\".\n"
 --- !u!222 &475964212
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7128,7 +7130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &893278051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8283,8 +8285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.6}
-  m_SizeDelta: {x: 1500, y: 100}
+  m_AnchoredPosition: {x: -0.0059, y: -0.0085}
+  m_SizeDelta: {x: 1589.064, y: 466.6609}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &985020415
 MonoBehaviour:
@@ -8319,9 +8321,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Add infos about ChooseSubject Canvas
+  m_Text: 'Studyroom RPG creates tables based on the subject students want to study.
+    Please begin by selecting the subject you are interested in.
 
-'
+    [If you want
+    to join people studying different subject, select "Free topic"]'
 --- !u!222 &985020416
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11450,7 +11454,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Join Private Table
+  m_Text: Join table by code
 --- !u!222 &1384121531
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14834,7 +14838,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Create New Table
+  m_Text: Create new table
 --- !u!222 &1809929258
 CanvasRenderer:
   m_ObjectHideFlags: 0
