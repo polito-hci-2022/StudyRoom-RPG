@@ -8,6 +8,7 @@ public class CreateTableScript : MonoBehaviour
 {
     public Button next_b;
     public InputField input_name;
+    public Text subject;
     Privacy privacy;
     string table_name;
 
@@ -37,6 +38,7 @@ public class CreateTableScript : MonoBehaviour
     }
 
     void OnEnable () {
+        subject.text = "Chosen Subject: " + Table.instance.subject;
         privacy = Privacy.Undefined;
     }
 }

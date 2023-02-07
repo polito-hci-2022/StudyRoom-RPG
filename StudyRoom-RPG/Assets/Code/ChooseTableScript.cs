@@ -9,12 +9,16 @@ public class ChooseTableScript : MonoBehaviour
 
     public Button next_b;
     public VerticalLayoutGroup selection_group;
+    public Text subject;
     List<Button> tables = new List<Button>();
     string table_code, table_name;
     
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
+        
+        next_b.interactable = false;
+        subject.text = "Chosen Subject: " + Table.instance.subject;
         for (int i=0; i<selection_group.transform.childCount; i++) {
             Button button = selection_group.transform.GetChild(i).gameObject.GetComponent<Button>();
             tables.Add(button);
@@ -46,8 +50,4 @@ public class ChooseTableScript : MonoBehaviour
         Table.instance.privacy = Privacy.Public;
     }
 
-    void OnEnable()
-    {
-        next_b.interactable = false;
-    }
 }

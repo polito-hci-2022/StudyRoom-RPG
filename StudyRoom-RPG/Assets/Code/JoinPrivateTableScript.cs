@@ -9,13 +9,14 @@ public class JoinPrivateTableScript : MonoBehaviour
     public Button next_b;
     public InputField input_code;
     public Text warning;
+    public Text subject;
 
     string code;
     int i;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        
+        subject.text = "Chosen Subject: " + Table.instance.subject;
     }
 
     // Update is called once per frame
@@ -24,15 +25,15 @@ public class JoinPrivateTableScript : MonoBehaviour
         //code is child 2 because a Caret is automaticly added when the InputField is used
         code = input_code.transform.GetChild(2).gameObject.GetComponent<Text>().text;
         if (code.Length == 6 && int.TryParse(code, out i)) {
-            warning.gameObject.SetActive(false);
+            warning.text = "The inserted code is valid.";
             next_b.interactable = true;
         }
         else if (code.Length == 0) {
-            warning.gameObject.SetActive(false);
+            warning.text = "";
             next_b.interactable = false;
         }
         else {
-            warning.gameObject.SetActive(true);
+            warning.text = "The inserted code is not valid. It must be a 6-digit numeric code.";
             next_b.interactable = false;
         } 
     }
