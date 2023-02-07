@@ -7013,11 +7013,11 @@ RectTransform:
   m_Children:
   - {fileID: 1878189257}
   m_Father: {fileID: 1609872184}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -15}
+  m_AnchoredPosition: {x: 100, y: -45}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &867804788
@@ -7309,7 +7309,7 @@ GameObject:
   - component: {fileID: 901743078}
   - component: {fileID: 901743077}
   m_Layer: 5
-  m_Name: Subject 1 - Text
+  m_Name: Free topic - Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7368,7 +7368,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Subject 4
+  m_Text: Free topic
 --- !u!222 &901743078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7617,7 +7617,7 @@ GameObject:
   - component: {fileID: 911959843}
   - component: {fileID: 911959842}
   m_Layer: 5
-  m_Name: Button - Subject 4
+  m_Name: Button - Free topic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7637,11 +7637,11 @@ RectTransform:
   m_Children:
   - {fileID: 901743076}
   m_Father: {fileID: 1609872184}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -105}
+  m_AnchoredPosition: {x: 100, y: -15}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &911959842
@@ -8406,8 +8406,8 @@ MonoBehaviour:
   m_Text: 'Studyroom RPG creates tables based on the subject students want to study.
     Please begin by selecting the subject you are interested in.
 
-    [If you want
-    to join people studying different subject, select "Free topic"]'
+    If you want
+    to join people studying different subject, select "Free topic"'
 --- !u!222 &985020416
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9656,11 +9656,11 @@ RectTransform:
   m_Children:
   - {fileID: 2060177660}
   m_Father: {fileID: 1609872184}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -75}
+  m_AnchoredPosition: {x: 100, y: -105}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104390286
@@ -11077,11 +11077,11 @@ RectTransform:
   m_Children:
   - {fileID: 1706111489}
   m_Father: {fileID: 1609872184}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -45}
+  m_AnchoredPosition: {x: 100, y: -75}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1268431178
@@ -13155,10 +13155,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 911959841}
   - {fileID: 867804787}
   - {fileID: 1268431177}
   - {fileID: 1104390285}
-  - {fileID: 911959841}
   m_Father: {fileID: 1102713209}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
