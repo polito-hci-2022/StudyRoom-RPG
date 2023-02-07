@@ -3099,7 +3099,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: TABLE INFO
+  m_Text: INFO - TABLE
 --- !u!222 &256274939
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6034,7 +6034,7 @@ MonoBehaviour:
     Subject: Subject X
 
     Privacy:
-    private/public
+    Private/Public
 
     People at the table: 4/4
 
