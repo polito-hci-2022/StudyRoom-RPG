@@ -10,10 +10,10 @@ public class DownloadModalScript : MonoBehaviour
     void OnEnable()
     {
         if (!DocumentList.instance.GetMyDocuments().Exists( x => x.title == document_name)) {
-            gameObject.transform.GetChild(2).GetComponent<Text>().text = "Do you want to download " + document_name + "?";    
+            gameObject.transform.GetChild(2).GetComponent<Text>().text = "Do you want to copy " + document_name + " to your notes?";    
         }
         else {
-            gameObject.transform.GetChild(2).GetComponent<Text>().text = "A document called "+ document_name + " is already present in your notes: if you continue it will be overwritten.\n\nDo you want to download it anyway?";
+            gameObject.transform.GetChild(2).GetComponent<Text>().text = "A document called "+ document_name + " is already present in your notes: if you continue it will be overwritten.\n\nDo you want to copy it anyway?";
         }
     }
 

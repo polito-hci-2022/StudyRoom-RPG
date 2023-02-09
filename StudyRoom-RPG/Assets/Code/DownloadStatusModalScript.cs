@@ -9,7 +9,7 @@ public class DownloadStatusModalScript : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        gameObject.transform.GetChild(2).GetComponent<Text>().text = DocumentList.instance.GetOpenDoc().title + " correctly downloaded!";
+        gameObject.transform.GetChild(2).GetComponent<Text>().text = DocumentList.instance.GetOpenDoc().title + " correctly copied!";
     }
 
     // Update is called once per frame
